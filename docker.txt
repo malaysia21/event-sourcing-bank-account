@@ -1,0 +1,6 @@
+#mongo
+docker run –it –d --name mongo-container –p 27017:27017 --network techBankNet --restart always –v mongo_data_container:/data/db mongo:latest
+
+#mysql
+docker run -it -d -p 3306:3306 --name mysql-container --network techBankNet -e MYSQL_ROOT_PASSWORD=password --restart always -v mysql_data-container:/var/lib/mysql mysql:latest
+-d mysql:8 mysqld --default-authentication-plugin=mysql_native_password
